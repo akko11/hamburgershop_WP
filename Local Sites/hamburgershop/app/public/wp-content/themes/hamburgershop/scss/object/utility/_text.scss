@@ -1,0 +1,8 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.u-bold {
+    font-family: 'M+ M Type-1 (basic latin) Regular';
+    font-weight: bold;
+    font-size: 1.6rem;
+}

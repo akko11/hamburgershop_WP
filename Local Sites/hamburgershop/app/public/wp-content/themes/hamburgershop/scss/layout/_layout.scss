@@ -1,0 +1,79 @@
+@use "../foundation/mixin"as m;
+@use "../foundation/variables"as v;
+
+.l-header {
+    background-color: v.$main-color;
+}
+
+.l-main {
+    height: auto;
+}
+
+.l-contents__wrapper {
+    background-color: v.$base-color;
+}
+
+.l-contents {
+    position: relative;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include m.mq(tab) {
+        width: 86vw;
+    }
+
+    @include m.mq(pc) {
+        width: 70vw;
+    }
+}
+
+.l-footer {
+    background: url(../../images/footer.png) center center /cover repeat;
+}
+
+.l-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    overflow: auto;
+    width: 87%;
+    height: 100%;
+    transition: all .5s ease;
+    color: v.$gray-color;
+    background-color: v.$subbase-color;
+    z-index: 100;
+
+    @include m.mq(tab) {
+        width: 44%;
+    }
+
+    @include m.mq(pc) {
+        position: static;
+        width: 100%;
+        transition: unset;
+        transform: unset;
+    }
+}
+
+.is-open {
+    overflow: hidden;
+}
+
+.is-open .l-nav {
+    right: 0;
+    transition: all .5s ease;
+}
+
+.overlay::after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    transition: all 1s ease;
+    top: 0%;
+    left: 0%;
+    z-index: 30;
+}

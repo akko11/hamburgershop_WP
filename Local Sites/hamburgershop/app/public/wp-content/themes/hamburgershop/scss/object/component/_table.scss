@@ -1,0 +1,36 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.c-table {
+    width: 100%;
+    height: auto;
+    font-size: 1.6rem;
+    color: v.$brown-color;
+    border-collapse: collapse;
+
+    tr,
+    td {
+        border: solid 1px v.$gray-color;
+    }
+
+    tr {
+        height: 77px;
+    }
+
+    td {
+        padding: 28px 30px;
+    }
+
+    td.c-table__left {
+        width: 40%;
+
+        @include m.mq(tab) {
+            width: 36%;
+        }
+
+        @include m.mq(pc) {
+            width: 32%;
+        }
+
+    }
+}

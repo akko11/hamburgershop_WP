@@ -1,0 +1,30 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.c-list {
+    color: v.$brown-color;
+    font-size: 1.6rem;
+    margin-top: 20px;
+
+}
+
+ol.c-list {
+    display: table;
+
+    li:after {
+        content: "";
+        display: block;
+    }
+
+    li {
+        display: table-row;
+        counter-increment: table-01;
+    }
+
+    li:before {
+        content: counter(table-01) ".";
+        display: table-cell;
+        padding-right: 0.4em;
+        text-align: right;
+    }
+}

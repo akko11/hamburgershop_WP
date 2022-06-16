@@ -1,0 +1,74 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.c-title--logo {
+    color: v.$gray-color;
+    font-size: 4.0rem;
+    line-height: 1.3;
+    margin-top: 40px;
+    font-weight: bold;
+
+    @include m.mq(pc) {
+        font-size: 6.4rem;
+        margin-top: 0;
+    }
+}
+
+.c-title--underbar {
+    display: inline-block;
+    position: relative;
+    color: v.$white-color;
+    font-weight: bold;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: v.$white-color;
+        height: 4px;
+        bottom: -19px;
+        width: 34px;
+
+        @include m.mq(tab) {
+            bottom: -21px;
+            width: 36px;
+        }
+
+        @include m.mq(pc) {
+            bottom: -34px;
+            width: 63px;
+        }
+    }
+}
+
+.c-title--h1 {
+    font-weight: bold;
+    font-size: 3.6rem;
+
+    @include m.mq(tab) {
+        font-size: 6.0rem;
+    }
+}
+
+.c-title--h2 {
+    font-weight: bold;
+    font-size: 2.8rem;
+
+    @include m.mq(tab) {
+        font-size: 3.6rem;
+    }
+}
+
+.c-title--h3 {
+    font-weight: bold;
+    font-size: 2.4rem;
+
+    @include m.mq(tab) {
+        font-size: 2.8rem;
+    }
+}
+
+.c-title--h4 {
+    font-weight: bold;
+    font-size: 2.0rem;
+}

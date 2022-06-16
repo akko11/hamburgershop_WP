@@ -1,0 +1,117 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.p-card__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    @include m.mq(tab) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+        margin-top: 40px;
+    }
+
+    @include m.mq(pc) {
+        margin-top: 120px;
+    }
+}
+
+.p-card01,
+.p-card02 {
+    position: relative;
+    width: 89vw;
+    height: auto;
+    min-height: 642px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include m.mq(tab) {
+        width: 43vw;
+        min-height: 681px;
+        padding: 11px;
+    }
+
+    @include m.mq(pc) {
+        width: 33vw;
+        min-height: 1193px;
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 4.1rem;
+        margin-bottom: 212px;
+
+        @include m.mq(tab) {
+            font-size: 4.4rem;
+            margin-bottom: 225px;
+        }
+
+        @include m.mq(pc) {
+            font-size: 8rem;
+            margin-bottom: 648px;
+        }
+    }
+}
+
+.p-card01 {
+    background: url(../../../images/card_01.jpg) center center /cover no-repeat;
+}
+
+.p-card02 {
+    background: url(../../../images/card_02.jpg) center center /cover no-repeat;
+    margin-top: 20px;
+
+    @include m.mq(tab) {
+        margin-top: 0;
+    }
+}
+
+ul.p-card__inner {
+    margin-top: auto;
+
+    li {
+        background-color: rgba(#fff, .8);
+        color: v.$brown-color;
+        width: 100%;
+        height: auto;
+        min-height: 162px;
+        margin-top: 10px;
+        padding: 19px 10px;
+
+        @include m.mq(tab) {
+            min-height: 172px;
+        }
+
+        @include m.mq(pc) {
+            min-height: 174px;
+            margin-top: 20px;
+            padding: 17px 19px;
+        }
+
+        h4 {
+            font-size: 2.2rem;
+            font-weight: 700;
+
+            @include m.mq(tab) {
+                font-size: 2.4rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            margin-top: 20px;
+
+            @include m.mq(pc) {
+                font-size: 1.4rem;
+                margin-top: 26px;
+
+            }
+        }
+    }
+}
+
+//ul.p-card__inner

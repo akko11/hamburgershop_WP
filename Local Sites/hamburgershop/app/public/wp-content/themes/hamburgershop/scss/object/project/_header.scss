@@ -1,0 +1,119 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.p-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.mq(pc) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 30px;
+        padding-left: 66px;
+        height: 217px;
+    }
+}
+
+.p-search__wrapper {
+    @include m.mq(sp) {
+        margin: 38px 31px 40px 24px;
+    }
+
+    @include m.mq(tab) {
+        margin: 38px auto 40px;
+    }
+
+    @include m.mq(pc) {
+        margin: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    span {
+        display: inline-block;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background: url(../../../images/icon_search.png) no-repeat center center / auto 100%;
+            display: inline-block;
+            position: absolute;
+            top: 12px;
+            left: 11px;
+            z-index: 10;
+        }
+    }
+
+    .p-search__box {
+        position: relative;
+        font-size: 1.6rem;
+        line-height: 1.2;
+        display: inline-block;
+        padding: 3px 0 3px 3em;
+        border-radius: 10px;
+        border: 1px solid v.$gray-color;
+        height: 46px;
+        margin: 0;
+        width: 47vw;
+
+        // @include m.mq(tab) {
+        //     width: 47vw;
+        // }
+
+        @include m.mq(pc) {
+            width: 20vw;
+        }
+
+
+    }
+
+    .p-search__button {
+        width: 16vw;
+        height: 46px;
+        margin-left: 12px;
+        color: v.$gray-color;
+
+        @include m.mq(tab) {
+            margin-left: 13px;
+        }
+
+        @include m.mq(pc) {
+            width: 7vw;
+            margin-left: 13px;
+        }
+
+
+    }
+
+}
+
+//.p-search__wrapper
+
+/* navの開閉（sp・tab） */
+.p-header__open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 700;
+    color: v.$gray-color;
+    background-color: v.$main-color;
+    border: none;
+    font-size: 2.0rem;
+    margin-top: 14px;
+    margin-right: 16px;
+
+    @include m.mq(tab) {
+        margin-top: 18px;
+        margin-right: 26px;
+        font-size: 3.4rem;
+    }
+
+    @include m.mq(pc) {
+        display: none;
+    }
+}

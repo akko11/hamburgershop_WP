@@ -1,0 +1,124 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.p-media {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    min-height: 585px;
+    height: auto;
+    color: #fff;
+    background-color: v.$accent-color;
+
+    div {
+        width: 100%;
+    }
+
+    img {
+        height: 230px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0 100%;
+    }
+
+    @include m.mq(tab) {
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 355px;
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 37px;
+        }
+
+        div {
+            width: 50%;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 100%;
+        }
+    }
+
+    @include m.mq(pc) {
+        min-height: 471px;
+        margin-top: 30px;
+
+        &:first-child {
+            margin-top: 70px;
+        }
+
+
+    }
+}
+
+.p-media__text {
+    padding-top: 30px;
+    padding-left: 17px;
+    padding-bottom: 44px;
+    margin-top: 10px;
+
+    p {
+        width: 73%;
+        margin-top: 10px;
+    }
+
+    @include m.mq(tab) {
+        padding: 30px 35px;
+
+        p {
+            width: 76%;
+        }
+    }
+
+    @include m.mq(pc) {
+        padding: 53px 60px;
+
+        p {
+            margin-top: 17px;
+        }
+
+    }
+}
+
+.p-media__title {
+    font-weight: bold;
+    font-size: 2.0rem;
+
+    @include m.mq(pc) {
+        font-size: 3.6rem;
+    }
+}
+
+.p-media__subtitle {
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin-top: 24px;
+
+    @include m.mq(pc) {
+        font-size: 2.4rem;
+        margin-top: 47px;
+    }
+}
+
+.p-media__button {
+    display: block;
+    margin-top: 40px;
+    width: 43vw;
+    height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include m.mq(tab) {
+        width: 20vw;
+        margin-top: 60px;
+    }
+
+    @include m.mq(pc) {
+        width: 15vw;
+        height: 76px;
+    }
+}

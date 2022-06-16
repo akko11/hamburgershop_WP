@@ -1,0 +1,131 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.p-map__wrapper {
+    background-color: black;
+    z-index: 1;
+
+}
+
+.p-map {
+    color: v.$white-color;
+    overflow-wrap: normal;
+    background: url(../../../images/map_02.png) no-repeat center center;
+    background-size: cover;
+    height: auto;
+    min-height: 691px;
+    margin-top: 134px;
+    padding: 40px 40px 51px 42px;
+
+    position: relative;
+    z-index: 10;
+
+    @include m.mq(tab) {
+        min-height: 415px;
+        padding: 40px 29px 40px 42px;
+
+    }
+
+    @include m.mq(pc) {
+        min-height: 649px;
+        padding: 80px 120px;
+
+    }
+
+    .p-map__overlay {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: rgba(0, 0, 0, .29);
+        z-index: 20;
+
+        @include m.mq(tab) {
+            height: 100%;
+        }
+
+        @include m.mq(pc) {
+            width: 60%;
+            height: 100%;
+
+        }
+    }
+
+    /*
+    .p-map__overlay {
+        color: v.$white-color;
+        width: 100%;
+        height: 60%;
+        //height: 415px;
+        overflow-y: visible;
+        overflow-wrap: normal;
+        background: rgba(0, 0, 0, .5);
+        padding: 40px 40px 51px 42px;
+        z-index: 20;
+
+        @include m.mq(tab) {
+            height: 100%;
+            padding: 40px 29px 40px 42px;
+        }
+
+        @include m.mq(pc) {
+            width: 60%;
+            margin: 0;
+            padding: 80px 140px 80px 120px;
+        }//.p-map__overlay
+}
+*/
+    h3 {
+        font-size: 3.0rem;
+        white-space: nowrap;
+        margin-top: 40px;
+        margin-left: 42px;
+        z-index: 30;
+
+        @include m.mq(tab) {}
+
+        @include m.mq(pc) {
+            font-size: 3.6rem;
+            margin-top: 80px;
+            margin-left: 120x;
+
+        }
+
+        &::before {
+            height: 2px;
+            width: 75px;
+            bottom: -20px;
+
+            @include m.mq(pc) {
+                bottom: -55px;
+            }
+        }
+    }
+
+    //h3
+
+    p {
+        position: relative;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 33px;
+        margin-top: 40px;
+        z-index: 30;
+
+        @include m.mq(tab) {
+            font-size: 1.6rem;
+        }
+
+        @include m.mq(pc) {
+            margin-top: 115px;
+            width: 45%;
+
+        }
+    }
+}
+
+
+
+//.p-map

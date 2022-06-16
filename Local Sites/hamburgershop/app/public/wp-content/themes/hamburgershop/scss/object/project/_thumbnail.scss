@@ -1,0 +1,137 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.p-thumbnail--archive {
+    img {
+        height: 283px;
+
+        @include m.mq(tab) {
+            height: 239px;
+        }
+    }
+}
+
+.p-thumbnail--top {
+    img {
+        width: 100%;
+        height: 285px;
+        object-fit: cover;
+
+        @include m.mq(pc) {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    h2 {
+        left: 25px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        font-weight: bold;
+        color: v.$white-color;
+        font-size: 3.6rem;
+
+        @include m.mq(tab) {
+            left: 86px;
+        }
+
+        @include m.mq(pc) {
+            font-size: 4rem;
+        }
+    }
+
+}
+
+/*
+.p-thumbnail {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 285px;
+        object-fit: cover;
+
+        @include m.mq(pc) {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    h2 {
+        left: 25px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        font-weight: bold;
+        color: v.$white-color;
+        font-size: 3.6rem;
+
+        @include m.mq(tab) {
+            left: 86px;
+        }
+
+        @include m.mq(pc) {
+            font-size: 4rem;
+        }
+    }
+}
+
+//.p-thumbnail
+
+.p-thumbnail--archive {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 283px;
+        object-fit: cover;
+        object-position: 30% 100%;
+        z-index: 1;
+
+        @include m.mq(pc) {
+            height: 239px;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        left: 37px;
+        top: 50%;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        color: v.$white-color;
+        z-index: 10;
+
+        @include m.mq(tab) {
+            left: 86px;
+        }
+
+        span {
+            display: block;
+            font-size: 1.6rem;
+
+            @include m.mq(tab) {
+                display: inline;
+                vertical-align: middle;
+                margin-left: 20px;
+
+            }
+        }
+    }
+}
+
+.p-thumbnail--single {
+    img {
+        height: 225px;
+
+        @include m.mq(tab) {
+            height: 500px;
+        }
+    }
+}*/

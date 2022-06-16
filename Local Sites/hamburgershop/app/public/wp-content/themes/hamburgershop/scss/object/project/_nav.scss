@@ -1,0 +1,92 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.p-nav__close {
+    border: none;
+    position: absolute;
+    top: 41px;
+    right: 33px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 6px;
+        height: 45px;
+        background: v.$gray-color;
+    }
+
+    &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    @include m.mq(tab) {
+        right: 41px;
+    }
+
+    @include m.mq(pc) {
+        display: none;
+    }
+}
+
+.p-nav {
+    position: relative;
+    margin-top: 178px;
+    margin-left: 46px;
+    margin-bottom: 212px;
+
+    @include m.mq(tab) {
+        margin-top: 171px;
+    }
+
+    @include m.mq(pc) {
+        margin-top: 82px;
+        margin-right: 60px;
+    }
+
+
+    .p-nav__title {
+        display: none;
+
+        @include m.mq(pc) {
+            display: inline-block;
+            font-size: 3.4rem;
+            font-weight: 700;
+            margin-bottom: 36px;
+        }
+    }
+
+    .p-nav__product a {
+        display: inline-block;
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-top: 34px;
+
+        @include m.mq(tab) {
+            margin-top: 41px;
+        }
+
+        @include m.mq(pc) {
+            margin-top: 49px;
+        }
+    }
+
+    ul.p-nav__list {
+        li:first-child a {
+            margin-top: 40px;
+        }
+
+        li a {
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 2.0rem;
+            margin-top: 23px;
+        }
+    }
+}

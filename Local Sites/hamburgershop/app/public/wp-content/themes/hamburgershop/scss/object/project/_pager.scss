@@ -1,0 +1,83 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.p-pager {
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    @include m.mq(tab) {
+        margin-top: 105px;
+    }
+
+    @include m.mq(pc) {
+        margin-top: 150px;
+        margin-bottom: 64px;
+    }
+}
+
+ul.p-pager__pagination {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include m.mq(tab) {
+        justify-content: center;
+    }
+}
+
+ul.p-pager__pagination li {
+    display: none;
+
+    &.pre,
+    &.next {
+        display: inline-block;
+
+        & a {
+            border: none;
+
+            img {
+                display: inline-block;
+            }
+        }
+    }
+
+    &.pre span {
+        margin-left: 7px;
+    }
+
+    &.next span {
+        margin-right: 7px;
+    }
+}
+
+@include m.mq(tab) {
+    ul.p-pager__pagination li {
+        display: inline-block;
+        font-size: 1.6rem;
+
+        &:first-child {
+            width: auto;
+        }
+
+        a {
+            display: block;
+            margin-left: 15px;
+            padding: 5px 11px;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            border: 1px solid v.$gray-color;
+            background: v.$base-color;
+
+            &.active,
+            &:hover {
+                color: #fff;
+                background: v.$accent-color;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+}

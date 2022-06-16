@@ -1,0 +1,38 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variables"as v;
+
+.p-footer {
+    height: 150px;
+
+    .p-information {
+        margin-top: 45px;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.0rem;
+
+            li a {
+                padding: 0px 20px;
+                color: v.$white-color;
+
+            }
+
+            li:first-child {
+                border-right: solid 1px v.$white-color;
+            }
+        }
+    }
+
+    p small {
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: v.$white-color;
+
+
+    }
+}
