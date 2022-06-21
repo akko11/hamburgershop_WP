@@ -1,29 +1,7 @@
-<!doctype html>
-<html lang="UTF-8">
-
-<head>
-    <meta charset="UTF-8">
-    <title>hamburger | ダミーサイト</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css"
-        href="http://mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css">
-    <link rel="stylesheet" type="text/css"
-        href="http://mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<body <?php body_class( $class ); ?>>
-    <div class="c-layout--grid">
-        <main class="l-main">
-            <?php get_header(); ?>
+<?php get_header(); ?>
             <div class="l-thumbnail">
                 <section class="c-feature p-thumbnail--top">
-                    <img src="/images/thumbnail_01.jpg">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/thumbnail_01.jpg">
                     <h2>ダミーサイト</h2>
                 </section>
             </div>
@@ -69,9 +47,3 @@
         </main>
         <?php get_sidebar(); ?>
    <?php get_footer(); ?>
-</div>
-    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
-
-</html>

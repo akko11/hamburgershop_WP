@@ -2,15 +2,13 @@
             <div class="p-footer">
             <?php
             wp_nav_menu(array(
-                'theme_location' => 'footer_menu'
+                'theme_location' => 'footer_nav'
                 ));
                 ?>
-                <!--<div class="p-information">
-                    <ul>
-                        <li><a href="">ショップ情報</a></li>
-                        <li><a href="">ヒストリー</a></li>
-                    </ul>
-                </div>-->
                 <p><small>Copyright: RaiseTech</small></p>
             </div>
         </footer>
+      </div>
+    <?php wp_footer(); ?>
+   </body>
+  </html>

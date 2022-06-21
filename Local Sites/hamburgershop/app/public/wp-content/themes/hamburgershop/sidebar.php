@@ -1,14 +1,12 @@
-<?php
-wp_nav_menu(array(
-    'theme_location' => 'side_menu'
-));
-?>
 
-<!--
 <div class="l-nav">
             <button class="p-nav__close"></button>
             <nav class="p-nav">
                 <p class="p-nav__title">Menu</p>
+                <?php
+                wp_nav_menu(array('theme_location' => 'category_nav'));
+?>
+<!--
                 <p class="p-nav__product"><a href="#">バーガー</a></p>
                 <ul class="p-nav__list">
                     <li><a href="#">ハンバーガー</a></li>
@@ -35,6 +33,8 @@ wp_nav_menu(array(
                     <li><a href="#">紅茶（Ice/Hot）</a></li>
                     <li><a href="#">コーヒー（Ice/Hot）</a></li>
                 </ul>
+                -->
+
+
             </nav>
         </div>
--->

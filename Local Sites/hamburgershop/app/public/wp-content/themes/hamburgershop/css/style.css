@@ -152,7 +152,7 @@ img {
 }
 
 .l-footer {
-  background: url(../../images/footer.png) center center/cover repeat;
+  background: url(/wp-content/themes/hamburgershop/images/footer.png) center center/cover repeat;
 }
 
 .l-nav {
@@ -644,12 +644,13 @@ ol.c-list li:before {
 .p-search__wrapper span {
   display: inline-block;
   position: relative;
+  background-color: #fff;
 }
 .p-search__wrapper span::before {
   content: "";
   width: 24px;
   height: 24px;
-  background: url(../../../images/icon_search.png) no-repeat center center/auto 100%;
+  background: url(/wp-content/themes/hamburgershop/images/icon_search.png) no-repeat center center/auto 100%;
   display: inline-block;
   position: absolute;
   top: 12px;
@@ -917,11 +918,11 @@ ol.c-list li:before {
 }
 
 .p-card01 {
-  background: url(../../../images/card_01.jpg) center center/cover no-repeat;
+  background: url(/wp-content/themes/hamburgershop/images/card_01.jpg) center center/cover no-repeat;
 }
 
 .p-card02 {
-  background: url(../../../images/card_02.jpg) center center/cover no-repeat;
+  background: url(/wp-content/themes/hamburgershop/images/card_02.jpg) center center/cover no-repeat;
   margin-top: 20px;
 }
 @media screen and (min-width: 600px) {
@@ -982,7 +983,7 @@ ul.p-card__inner li p {
 .p-map {
   color: #FFF;
   overflow-wrap: normal;
-  background: url(../../../images/map_02.png) no-repeat center center;
+  background: url(/wp-content/themes/hamburgershop/images/map_02.png) no-repeat center center;
   background-size: cover;
   height: auto;
   min-height: 691px;
@@ -990,30 +991,6 @@ ul.p-card__inner li p {
   padding: 40px 40px 51px 42px;
   position: relative;
   z-index: 10;
-  /*
-      .p-map__overlay {
-          color: v.$white-color;
-          width: 100%;
-          height: 60%;
-          //height: 415px;
-          overflow-y: visible;
-          overflow-wrap: normal;
-          background: rgba(0, 0, 0, .5);
-          padding: 40px 40px 51px 42px;
-          z-index: 20;
-
-          @include m.mq(tab) {
-              height: 100%;
-              padding: 40px 29px 40px 42px;
-          }
-
-          @include m.mq(pc) {
-              width: 60%;
-              margin: 0;
-              padding: 80px 140px 80px 120px;
-          }//.p-map__overlay
-  }
-  */
 }
 @media screen and (min-width: 600px) {
   .p-map {
@@ -1051,15 +1028,11 @@ ul.p-card__inner li p {
 .p-map h3 {
   font-size: 3rem;
   white-space: nowrap;
-  margin-top: 40px;
-  margin-left: 42px;
   z-index: 30;
 }
 @media screen and (min-width: 1025px) {
   .p-map h3 {
     font-size: 3.6rem;
-    margin-top: 80px;
-    margin-left: 120x;
   }
 }
 .p-map h3::before {
@@ -1152,49 +1125,50 @@ ul.p-card__inner li p {
     margin-bottom: 36px;
   }
 }
-.p-nav .p-nav__product a {
+.p-nav ul.menu li a {
   display: inline-block;
   font-size: 2.4rem;
   font-weight: 700;
   margin-top: 34px;
 }
 @media screen and (min-width: 600px) {
-  .p-nav .p-nav__product a {
+  .p-nav ul.menu li a {
     margin-top: 41px;
   }
 }
 @media screen and (min-width: 1025px) {
-  .p-nav .p-nav__product a {
+  .p-nav ul.menu li a {
     margin-top: 49px;
   }
 }
-.p-nav ul.p-nav__list li:first-child a {
+.p-nav ul.sub-menu li:first-child a {
   margin-top: 40px;
 }
-.p-nav ul.p-nav__list li a {
+.p-nav ul.sub-menu li a {
   display: inline-block;
   margin-left: 20px;
   font-size: 2rem;
+  font-weight: normal;
   margin-top: 23px;
 }
 
 .p-footer {
   height: 150px;
 }
-.p-footer .p-information {
+.p-footer .menu-footer-navigation-container {
   margin-top: 45px;
 }
-.p-footer .p-information ul {
+.p-footer .menu-footer-navigation-container ul {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
 }
-.p-footer .p-information ul li a {
+.p-footer .menu-footer-navigation-container ul li a {
   padding: 0px 20px;
   color: #FFF;
 }
-.p-footer .p-information ul li:first-child {
+.p-footer .menu-footer-navigation-container ul li:first-child {
   border-right: solid 1px #FFF;
 }
 .p-footer p small {
