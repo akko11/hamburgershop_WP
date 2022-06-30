@@ -45,7 +45,7 @@ function post_has_archive($args, $post_type)
 {
 if ( 'post' == $post_type ) {
     $args['rewrite'] = true;
-    $args['has_archive'] = 'menu'; // 任意のURL
+    $args['has_archive'] = 'category'; // 任意のURL
 }
 return $args;
 }

@@ -29,9 +29,22 @@
                             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </article>
-                    <?php get_template_part('media'); ?>
-                    <div class="p-pager">
-                        <ul class="p-pager__pagination">
+                    <?php
+                     $paged = get_query_var('paged') ? get_query_var('paged') : 1;    //pagedに渡す変数
+                     query_posts( $query_string.'&posts_per_page=3&paged='.$paged);  //pagedとposts_per_pageの指定 
+                    ?>
+
+                     <?php get_template_part('media'); ?>
+                     <div class="p-pager">
+                    <?php
+                    if(function_exists('wp_pagenavi')):
+                    wp_pagenavi();    //wp_pagenavi()の呼び出し
+                    endif;
+                  wp_reset_query(); 
+                  ?>
+
+                    <!--    
+                    <ul class="p-pager__pagination">
                             <li>page 1/10</li>
                             <li class="pre"><a href="#"><img src="images/pager_pre.png" alt="前へ"><span>前へ</span></a>
                             </li>
@@ -47,6 +60,8 @@
                             <li class="next"><a href="#"><span>次へ</span><img src="images/pager_next.png" alt="次へ"></a>
                             </li>
                         </ul>
+                    -->
+
                     </div>
 
 

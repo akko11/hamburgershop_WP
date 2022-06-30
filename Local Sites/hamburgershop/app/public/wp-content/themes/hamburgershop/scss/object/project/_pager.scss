@@ -15,6 +15,78 @@
     }
 }
 
+.wp-pagenavi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @include m.mq(tab) {
+        justify-content: center;
+    }
+}
+
+span.pages {
+    display: none;
+
+    &.prev,
+    &.next {
+        display: inline-block;
+
+        & a {
+            border: none;
+
+            img {
+                display: inline-block;
+            }
+        }
+    }
+
+    &.prev,
+    &.next {
+        margin-left: 7px;
+    }
+}
+
+@include m.mq(tab) {
+    .wp-pagenavi {
+        font-size: 1.6rem;
+
+        span,
+        a {
+            display: inline-block;
+            margin-left: 15px;
+            padding: 5px 11px;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            border: 1px solid v.$gray-color;
+            background: v.$base-color;
+
+            &.current,
+            &:hover {
+                color: #fff;
+                background: v.$accent-color;
+            }
+        }
+
+        .previouspostslink {
+            border: none;
+            background: url(/wp-content/themes/hamburgershop/images/pager_pre.png) center center no-repeat;
+        }
+
+        .nextpostslink {
+            border: none;
+            background: url(/wp-content/themes/hamburgershop/images/pager_next.png) center center no-repeat;
+        }
+
+        .pages {
+            width: auto;
+            border: none;
+        }
+    }
+}
+
+/*
 ul.p-pager__pagination {
     display: flex;
     justify-content: space-around;
@@ -80,4 +152,4 @@ ul.p-pager__pagination li {
             }
         }
     }
-}
+}*/

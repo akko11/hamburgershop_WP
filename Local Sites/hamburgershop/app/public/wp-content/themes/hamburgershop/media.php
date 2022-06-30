@@ -10,32 +10,10 @@
                                 <h4 class="p-media__subtitle">小見出しが入ります</h4>
                                 <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                                 </p>
-                                <a href="#"><button class="c-button--roundedcorners p-media__button">詳しく見る</button></a>
+                                <a href="<?php the_permalink(); ?>"><button class="c-button--roundedcorners p-media__button">詳しく見る</button></a>
                             </div>
                         </li>
                         <?php endwhile;
                         else :
                         ?><p>表示する内容がありません</p><?php endif; ?>
-
-                        <!--
-                        <li class="p-media">
-                            <div><img src="images/section_01.jpg"></div>
-                            <div class="p-media__text">
-                                <h3 class="p-media__title">ダブルチーズバーガー</h3>
-                                <h4 class="p-media__subtitle">小見出しが入ります</h4>
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                                <a href="#"><button class="c-button--roundedcorners p-media__button">詳しく見る</button></a>
-                            </div>
-                        </li>
-                        <li class="p-media">
-                            <div><img src="images/section_01.jpg"></div>
-                            <div class="p-media__text">
-                                <h3 class="p-media__title">スペシャルチーズバーガー</h3>
-                                <h4 class="p-media__subtitle">小見出しが入ります</h4>
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                                <a href="#"><button class="c-button--roundedcorners p-media__button">詳しく見る</button></a>
-                            </div>
-                        </li>-->
                     </ul>
