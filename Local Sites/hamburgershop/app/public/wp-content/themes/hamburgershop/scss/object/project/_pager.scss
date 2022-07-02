@@ -19,40 +19,61 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 1.6rem;
+    color: v.$gray-color;
 
     @include m.mq(tab) {
         justify-content: center;
     }
 }
 
-span.pages {
+span.pages,
+a.page,
+.current {
     display: none;
-
-    &.prev,
-    &.next {
-        display: inline-block;
-
-        & a {
-            border: none;
-
-            img {
-                display: inline-block;
-            }
-        }
-    }
-
-    &.prev,
-    &.next {
-        margin-left: 7px;
-    }
 }
+
+//&.prev,
+//&.next {
+//display: inline-block;
+
+//& a {
+//border: none;
+
+//img {
+//display: inline-block;
+//}
+//}
+//}
+
+//&.prev,
+//&.next {
+//margin-left: 7px;
+//}
+.previouspostslink,
+.nextpostslink {
+    width: 60px;
+    border: none;
+}
+
+.previouspostslink {
+    text-align: right;
+    background: url(/wp-content/themes/hamburgershop/images/pager_pre.png) left center no-repeat;
+}
+
+.nextpostslink {
+    background: url(/wp-content/themes/hamburgershop/images/pager_next.png) right center no-repeat;
+}
+
+
 
 @include m.mq(tab) {
     .wp-pagenavi {
-        font-size: 1.6rem;
 
-        span,
-        a {
+        span.pages,
+        a.page,
+        .current {
+            display: inline-block;
             display: inline-block;
             margin-left: 15px;
             padding: 5px 11px;
@@ -61,95 +82,29 @@ span.pages {
             text-align: center;
             border: 1px solid v.$gray-color;
             background: v.$base-color;
-
-            &.current,
-            &:hover {
-                color: #fff;
-                background: v.$accent-color;
-            }
         }
 
-        .previouspostslink {
+        .current,
+        :hover {
+            color: #fff;
+            background: v.$accent-color;
+        }
+
+        span.pages {
+            width: auto;
             border: none;
-            background: url(/wp-content/themes/hamburgershop/images/pager_pre.png) center center no-repeat;
+        }
+
+        .previouspostslink,
+        .nextpostslink {
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            width: auto;
         }
 
         .nextpostslink {
-            border: none;
-            background: url(/wp-content/themes/hamburgershop/images/pager_next.png) center center no-repeat;
-        }
-
-        .pages {
-            width: auto;
-            border: none;
+            margin-left: 13px;
         }
     }
 }
-
-/*
-ul.p-pager__pagination {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    @include m.mq(tab) {
-        justify-content: center;
-    }
-}
-
-ul.p-pager__pagination li {
-    display: none;
-
-    &.pre,
-    &.next {
-        display: inline-block;
-
-        & a {
-            border: none;
-
-            img {
-                display: inline-block;
-            }
-        }
-    }
-
-    &.pre span {
-        margin-left: 7px;
-    }
-
-    &.next span {
-        margin-right: 7px;
-    }
-}
-
-@include m.mq(tab) {
-    ul.p-pager__pagination li {
-        display: inline-block;
-        font-size: 1.6rem;
-
-        &:first-child {
-            width: auto;
-        }
-
-        a {
-            display: block;
-            margin-left: 15px;
-            padding: 5px 11px;
-            width: 35px;
-            height: 35px;
-            text-align: center;
-            border: 1px solid v.$gray-color;
-            background: v.$base-color;
-
-            &.active,
-            &:hover {
-                color: #fff;
-                background: v.$accent-color;
-            }
-
-            span {
-                display: none;
-            }
-        }
-    }
-}*/

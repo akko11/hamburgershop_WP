@@ -13,79 +13,19 @@
                             テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
                         </p>
                     </article>
-                    <ul>
-                        <li class="p-media">
-                            <div><img src="images/section_01.jpg"></div>
-                            <div class="p-media__text">
-                                <h3 class="p-media__title">見出しが入ります</h3>
-                                <h4 class="p-media__subtitle">小見出しが入ります</h4>
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                                <a href="#"><button class="c-button--roundedcorners p-media__button">詳しく見る</button></a>
-                            </div>
-                        </li>
-                        <li class="p-media">
-                            <div><img src="images/section_01.jpg"></div>
-                            <div class="p-media__text">
-                                <h3 class="p-media__title">見出しが入ります</h3>
-                                <h4 class="p-media__subtitle">小見出しが入ります</h4>
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                                <a href="#"><button class="c-button--roundedcorners p-media__button">詳しく見る</button></a>
-                            </div>
-                        </li>
-                        <li class="p-media">
-                            <div><img src="images/section_01.jpg"></div>
-                            <div class="p-media__text">
-                                <h3 class="p-media__title">見出しが入ります</h3>
-                                <h4 class="p-media__subtitle">小見出しが入ります</h4>
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                                <a href="#"><button class="c-button--roundedcorners p-media__button">詳しく見る</button>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="p-media">
-                            <div><img src="images/section_01.jpg"></div>
-                            <div class="p-media__text">
-                                <h3 class="p-media__title">見出しが入ります</h3>
-                                <h4 class="p-media__subtitle">小見出しが入ります</h4>
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                                <a href="#"><button class="c-button--roundedcorners p-media__button">詳しく見る</button>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="p-media">
-                            <div><img src="images/section_01.jpg"></div>
-                            <div class="p-media__text">
-                                <h3 class="p-media__title">見出しが入ります</h3>
-                                <h4 class="p-media__subtitle">小見出しが入ります</h4>
-                                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                                </p>
-                                <a href="#"><button class="c-button--roundedcorners p-media__button">詳しく見る</button>
-                                </a>
-                            </div>
-                        </li>
+                    <?php
+                     $paged = get_query_var('paged') ? get_query_var('paged') : 1;    //pagedに渡す変数
+                     query_posts( $query_string.'&posts_per_page=3&paged='.$paged);  //pagedとposts_per_pageの指定 
+                    ?>
 
-                    </ul>
-                    <div class="p-pager">
-                        <ul class="p-pager__pagination">
-                            <li>page 1/10</li>
-                            <li class="pre"><a href="#"><img src="images/pager_pre.png" alt="前へ"><span>前へ</span></a>
-                            </li>
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li><a href="#">7</a></li>
-                            <li><a href="#">8</a></li>
-                            <li><a href="#">9</a></li>
-                            <li class="next"><a href="#"><span>次へ</span><img src="images/pager_next.png" alt="次へ"></a>
-                            </li>
-                        </ul>
+                     <?php get_template_part('media'); ?>
+                     <div class="p-pager">
+                    <?php
+                    if(function_exists('wp_pagenavi')):
+                    wp_pagenavi();    //wp_pagenavi()の呼び出し
+                    endif;
+                  wp_reset_query(); 
+                  ?>
                     </div>
                 </div>
             </div>

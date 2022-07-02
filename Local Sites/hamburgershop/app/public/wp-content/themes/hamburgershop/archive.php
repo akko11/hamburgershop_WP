@@ -42,28 +42,7 @@
                     endif;
                   wp_reset_query(); 
                   ?>
-
-                    <!--    
-                    <ul class="p-pager__pagination">
-                            <li>page 1/10</li>
-                            <li class="pre"><a href="#"><img src="images/pager_pre.png" alt="前へ"><span>前へ</span></a>
-                            </li>
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li><a href="#">7</a></li>
-                            <li><a href="#">8</a></li>
-                            <li><a href="#">9</a></li>
-                            <li class="next"><a href="#"><span>次へ</span><img src="images/pager_next.png" alt="次へ"></a>
-                            </li>
-                        </ul>
-                    -->
-
                     </div>
-
 
                 </div>
             </div>

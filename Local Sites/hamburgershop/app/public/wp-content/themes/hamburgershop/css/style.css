@@ -1345,6 +1345,8 @@ ul.p-card__inner li p {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-size: 1.6rem;
+  color: #707070;
 }
 @media screen and (min-width: 600px) {
   .wp-pagenavi {
@@ -1352,28 +1354,32 @@ ul.p-card__inner li p {
   }
 }
 
-span.pages {
+span.pages,
+a.page,
+.current {
   display: none;
 }
-span.pages.prev, span.pages.next {
-  display: inline-block;
-}
-span.pages.prev a, span.pages.next a {
+
+.previouspostslink,
+.nextpostslink {
+  width: 60px;
   border: none;
 }
-span.pages.prev a img, span.pages.next a img {
-  display: inline-block;
+
+.previouspostslink {
+  text-align: right;
+  background: url(/wp-content/themes/hamburgershop/images/pager_pre.png) left center no-repeat;
 }
-span.pages.prev, span.pages.next {
-  margin-left: 7px;
+
+.nextpostslink {
+  background: url(/wp-content/themes/hamburgershop/images/pager_next.png) right center no-repeat;
 }
 
 @media screen and (min-width: 600px) {
-  .wp-pagenavi {
-    font-size: 1.6rem;
-  }
-  .wp-pagenavi span,
-.wp-pagenavi a {
+  .wp-pagenavi span.pages,
+.wp-pagenavi a.page,
+.wp-pagenavi .current {
+    display: inline-block;
     display: inline-block;
     margin-left: 15px;
     padding: 5px 11px;
@@ -1383,23 +1389,24 @@ span.pages.prev, span.pages.next {
     border: 1px solid #707070;
     background: #FFFDFA;
   }
-  .wp-pagenavi span.current, .wp-pagenavi span:hover,
-.wp-pagenavi a.current,
-.wp-pagenavi a:hover {
+  .wp-pagenavi .current,
+.wp-pagenavi :hover {
     color: #fff;
     background: #3C2B1C;
   }
-  .wp-pagenavi .previouspostslink {
-    border: none;
-    background: url(/wp-content/themes/hamburgershop/images/pager_pre.png) center center no-repeat;
-  }
-  .wp-pagenavi .nextpostslink {
-    border: none;
-    background: url(/wp-content/themes/hamburgershop/images/pager_next.png) center center no-repeat;
-  }
-  .wp-pagenavi .pages {
+  .wp-pagenavi span.pages {
     width: auto;
     border: none;
+  }
+  .wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: auto;
+  }
+  .wp-pagenavi .nextpostslink {
+    margin-left: 13px;
   }
 }
 /*
@@ -1468,7 +1475,8 @@ ul.p-pager__pagination li {
             }
         }
     }
-}*/
+}
+*/
 .u-margintop--30 {
   margin-top: 30px;
 }
