@@ -2,7 +2,7 @@
 <html lang="UTF-8">
 <head>
     <meta charset="UTF-8">
-    <title>hamburger | ダミーサイト</title>
+    <title>hamburger | <?php wp_title(); ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="">

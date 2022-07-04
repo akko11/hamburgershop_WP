@@ -50,4 +50,13 @@ if ( 'post' == $post_type ) {
 return $args;
 }
 add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
+/* 検索結果のタイトルをカスタマイズ */
+function wp_search_title($search_title){
+    if(is_search()){
+      $search_title = '「'.get_search_query().'」の検索結果';
+    }
+    return $search_title;
+  }
+  add_filter('wp_title','wp_search_title');
 ?>
