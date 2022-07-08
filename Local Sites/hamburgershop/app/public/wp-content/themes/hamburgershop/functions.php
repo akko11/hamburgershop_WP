@@ -59,4 +59,7 @@ function wp_search_title($search_title){
     return $search_title;
   }
   add_filter('wp_title','wp_search_title');
+
+//本体ギャラリーCSS停止
+add_filter( 'use_default_gallery_style', '__return_false' );
 ?>

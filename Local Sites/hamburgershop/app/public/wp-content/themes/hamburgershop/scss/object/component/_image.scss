@@ -1,9 +1,9 @@
 @use "../../foundation/mixin"as m;
 @use "../../foundation/variables"as v;
 
-.c-image__full img {
+.size-full img {
     width: 100%;
-    height: 124px;
+    //height: 124px;
     object-fit: cover;
     object-position: 50% 100%;
 
@@ -12,6 +12,44 @@
     }
 }
 
+.wp-block-media-text {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.wp-block-gallery,
+.has-nested-images,
+.columns-3,
+.aligncenter {
+    display: flex;
+    flex-direction: column;
+
+    @include m.mq(tab) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+    }
+
+    figure.wp-block-image:not(#individual-image) {
+        width: 100% !important;
+        height: auto;
+        margin-top: 20px;
+        display: flex;
+        flex-grow: 0;
+
+        @include m.mq(tab) {
+            width: 49% !important;
+        }
+
+        @include m.mq(pc) {
+            width: 32% !important;
+        }
+    }
+}
+
+/*
 .c-image__left {
     width: 100%;
     height: auto;
@@ -66,7 +104,6 @@
         }
     }
 }
-
 .c-image__gallery {
     display: flex;
     flex-direction: column;
@@ -84,13 +121,13 @@
 
         @include m.mq(tab) {
             width: 49%;
-            //min-width: 349px;
         }
 
         @include m.mq(pc) {
             width: 32%;
-            //min-width: 438px;
         }
 
     }
 }
+
+*/

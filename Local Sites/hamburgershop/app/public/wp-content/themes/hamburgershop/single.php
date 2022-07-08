@@ -1,6 +1,10 @@
 <?php get_header(); ?>    
        <div class="l-thumbnail">
                 <section class="c-feature">
+                <?php if (has_post_thumbnail()) : ?>
+	            <?php the_post_thumbnail('full', array('class' => '')); ?>
+                <?php else : ?>
+               <?php endif ; ?>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/thumbnail_cheeseburger.jpg">
                     <h1 class="c-title--h1"><?php the_title(); ?></h1>
                 </section>
@@ -8,6 +12,9 @@
             <div class="l-contents__wrapper">
                 <div class="l-contents">
                     <div class="p-format">
+                    <?php if(have_posts()): while(have_posts()):the_post(); ?>
+                    <?php the_content(); ?>
+                    <!--
                         <h2 class="c-title--h2 u-margintop--30">見出しh2</h2>
                         <p class="u-margintop--30">
                             Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。
@@ -93,9 +100,10 @@
                     </table>
                     <p><button class="c-button u-margintop--30">ボタン</button></p>
                     <p class="u-margintop--30 u-marginbottom--177"><b class="u-bold">boldboldboldboldboldboldbold</b>
-                    </p>
+                    </p>-->
                 </div>
             </div>
+            <?php endwhile; endif; ?>
           </main>
           <?php get_sidebar(); ?>
    <?php get_footer(); ?>
