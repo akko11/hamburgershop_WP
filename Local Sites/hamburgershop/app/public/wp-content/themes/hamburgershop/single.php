@@ -2,8 +2,8 @@
        <div class="l-thumbnail">
                 <section class="c-feature">
                 <?php if (has_post_thumbnail()) : ?>
-	            <?php the_post_thumbnail('full', array('class' => '')); ?>
                 <?php else : ?>
+	            <?php the_post_thumbnail('full', array('class' => '')); ?>
                <?php endif ; ?>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/thumbnail_cheeseburger.jpg">
                     <h1 class="c-title--h1"><?php the_title(); ?></h1>

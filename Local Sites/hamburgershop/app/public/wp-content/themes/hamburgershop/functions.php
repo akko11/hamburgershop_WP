@@ -60,6 +60,9 @@ function wp_search_title($search_title){
   }
   add_filter('wp_title','wp_search_title');
 
-//本体ギャラリーCSS停止
-add_filter( 'use_default_gallery_style', '__return_false' );
+//ギャラリー画像の枠線非表示
+add_filter( 'gallery_style', 'gallery_border_none');
+function gallery_border_none($style){ 
+return str_replace('border: 2px solid #cfcfcf;', 'border: none;',$style );
+}
 ?>

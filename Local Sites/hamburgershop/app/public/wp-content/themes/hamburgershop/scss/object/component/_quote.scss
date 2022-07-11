@@ -8,11 +8,11 @@
     color: v.$brown-color;
     font-size: 1.6rem;
     padding: 30px 20px;
-    //margin-top: 30px;
+    margin-top: 30px;
 
     @include m.mq(tab) {
         padding: 50px 56px 60px 50px;
-        //margin-top: 60px;
+        margin-top: 60px;
 
     }
 

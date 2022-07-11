@@ -1,12 +1,18 @@
 @use "../../foundation/mixin"as m;
 @use "../../foundation/variables"as v;
 
-.c-table {
+.wp-block-table {
+    margin-top: 30px;
     width: 100%;
     height: auto;
     font-size: 1.6rem;
     color: v.$brown-color;
     border-collapse: collapse;
+
+    @include m.mq(tab) {
+        margin-top: 60px;
+
+    }
 
     tr,
     td {
@@ -21,7 +27,7 @@
         padding: 28px 30px;
     }
 
-    td.c-table__left {
+    td:first-child {
         width: 40%;
 
         @include m.mq(tab) {
