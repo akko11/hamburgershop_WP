@@ -1,13 +1,12 @@
 <!doctype html>
-<html lang="UTF-8">
+<html lang="<?php language_attributes(); ?>">
 <head>
     <meta charset="UTF-8">
-    <title>hamburger | <?php wp_title(); ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="">
 </head>
-<body>
+<body <?php body_class(); ?>
+<?php wp_body_open(); ?>>
     <div class="c-layout--grid">
         <main class="l-main">
           <header class="l-header">

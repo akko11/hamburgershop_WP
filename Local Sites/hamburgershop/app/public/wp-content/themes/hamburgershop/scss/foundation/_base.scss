@@ -43,5 +43,13 @@ h6 {
 
 img {
     vertical-align: middle;
-    border-style: none;
+    border-style: none !important;
+}
+
+.alignright {
+    text-align: right;
+}
+
+.alignleft {
+    text-align: left;
 }

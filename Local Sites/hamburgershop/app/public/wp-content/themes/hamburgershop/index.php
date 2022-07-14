@@ -1,18 +1,4 @@
-<!doctype html>
-<html lang="UTF-8">
-
-<head>
-    <meta charset="UTF-8">
-    <title>hamburger | ダミーサイト</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="">
-</head>
-
-<body <?php body_class( $class ); ?>>
-    <div class="c-layout--grid">
-        <main class="l-main">
-            <?php get_header(); ?>
+<?php get_header(); ?>
             <div class="l-thumbnail">
                 <section class="c-feature p-thumbnail--top">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/thumbnail_01.jpg">
@@ -22,7 +8,7 @@
             <div class="l-contents__wrapper">
                 <div class="p-card__wrapper">
                     <section class="p-card01">
-                        <h3 class="c-title--underbar">Take Out</h3>
+                        <h3 class="c-title--underbar"><a href="<?php echo esc_url(home_url('/')); ?>/category/takeout/">Take Out</a></h3>
                         <ul class="p-card__inner">
                             <li>
                                 <h4>Take Out</h4>
@@ -35,7 +21,7 @@
                         </ul>
                     </section>
                     <section class="p-card02">
-                        <h3 class="c-title--underbar">Eat In</h3>
+                        <h3 class="c-title--underbar"><a href="<?php echo esc_url(home_url('/')); ?>/category/eatin/">Eat In</a></h3>
                         <ul class="p-card__inner">
                             <li>
                                 <h4>Take Out</h4>
