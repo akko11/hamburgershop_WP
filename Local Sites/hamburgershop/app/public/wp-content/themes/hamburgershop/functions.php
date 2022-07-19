@@ -1,6 +1,6 @@
 <?php
 function custom_theme_support(){
-    add_theme_support('html5'.array(
+    add_theme_support('html5',array(
         'sratch-form',
         'comment-form',
         'comment-list',
@@ -15,9 +15,9 @@ function custom_theme_support(){
     ));
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( "responsive-embeds" );
-    //add_theme_support( "custom-logo", $args );
-    add_theme_support( "custom-header", $args );
-    add_theme_support( "custom-background", $args );
+    add_theme_support( "custom-logo" );
+    add_theme_support( "custom-header" );
+    add_theme_support( "custom-background" );
     add_theme_support( "wp-block-styles" );
     add_theme_support( "align-wide" );   
 
