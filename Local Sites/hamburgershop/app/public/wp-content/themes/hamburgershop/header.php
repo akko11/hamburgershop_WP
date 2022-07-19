@@ -5,8 +5,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body <?php body_class(); ?>
-<?php wp_body_open(); ?>>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
     <div class="c-layout--grid">
         <main class="l-main">
           <header class="l-header">

@@ -18,8 +18,8 @@
             </div>
             <?php endwhile; endif; ?>
             <div class="page-links">
-+            <?php wp_link_pages(); // 記事内ページャー ?>
-+        </div>
+            <?php wp_link_pages(); // 記事内ページャー ?>
+        </div>
           </main>
           <?php get_sidebar(); ?>
    <?php get_footer(); ?>
