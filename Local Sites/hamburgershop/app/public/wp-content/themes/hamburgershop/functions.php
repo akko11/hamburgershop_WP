@@ -32,15 +32,15 @@ remove_filter( 'term_description', 'wpautop' );
 
 //外部ファイルの読み込み
 function readScript(){
-    wp_enqueue_style( 'ress',get_theme_file_uri( '/css/ress.min.css' ), array(),$theme_version );
+    wp_enqueue_style( 'ress',get_theme_file_uri( '/css/ress.min.css' ), array() );
     wp_enqueue_style( 'mplus','//mplus-fonts.sourceforge.jp/webfonts/basic_latin/mplus_webfonts.css',array(),'' );
     wp_enqueue_style( 'mplus-j','//mplus-fonts.sourceforge.jp/webfonts/general-j/mplus_webfonts.css',array(),'' );
     wp_enqueue_style( 'fontsgoogleapis','//fonts.googleapis.com',array(),'' );
     wp_enqueue_style( 'fontsgoogleapis','//fonts.gstatic.com',array(),'' );
     wp_enqueue_style( 'robot','//fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap',array(),'' );
-    wp_enqueue_style( 'rtbread',get_theme_file_uri( '/css/style.min.css' ), array(), $theme_version );
-    wp_enqueue_script( 'jquery',get_theme_file_uri( '/js/jquery-3.6.0.min.js' ),'jquery', $theme_version, true );
-    wp_enqueue_script( 'script',get_theme_file_uri( '/js/script.js' ),'jquery', $theme_version, true );
+    wp_enqueue_style( 'rtbread',get_theme_file_uri( '/css/style.min.css' ), array() );
+    wp_enqueue_script( 'jquery',get_theme_file_uri( '/js/jquery-3.6.0.min.js' ),'jquery', true );
+    wp_enqueue_script( 'script',get_theme_file_uri( '/js/script.js' ),'jquery', true );
 }
 
 add_action('wp_enqueue_scripts', 'readScript');
