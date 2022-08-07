@@ -58,11 +58,11 @@
 }
 
 .p-card01 {
-    background: url(/wp-content/themes/hamburgershop/images/card_01.jpg) center center /cover no-repeat;
+    background: url(../images/card_01.jpg) center center /cover no-repeat;
 }
 
 .p-card02 {
-    background: url(/wp-content/themes/hamburgershop/images/card_02.jpg) center center /cover no-repeat;
+    background: url(../images/card_02.jpg) center center /cover no-repeat;
     margin-top: 20px;
 
     @include m.mq(tab) {

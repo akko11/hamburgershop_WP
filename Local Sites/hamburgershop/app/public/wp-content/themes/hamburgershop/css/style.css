@@ -159,7 +159,7 @@ img {
 }
 
 .l-footer {
-  background: url(/wp-content/themes/hamburgershop/images/footer.png) center center/cover repeat;
+  background: url(../images/footer.png) center center/cover repeat;
 }
 
 .l-nav {
@@ -659,7 +659,7 @@ ol.c-list li:before {
   content: "";
   width: 24px;
   height: 24px;
-  background: url(/wp-content/themes/hamburgershop/images/icon_search.png) no-repeat center center/auto 100%;
+  background: url(../images/icon_search.png) no-repeat center center/auto 100%;
   display: inline-block;
   position: absolute;
   top: 12px;
@@ -770,96 +770,6 @@ ol.c-list li:before {
   }
 }
 
-/*
-.p-thumbnail {
-    position: relative;
-
-    img {
-        width: 100%;
-        height: 285px;
-        object-fit: cover;
-
-        @include m.mq(pc) {
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    h2 {
-        left: 25px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        font-weight: bold;
-        color: v.$white-color;
-        font-size: 3.6rem;
-
-        @include m.mq(tab) {
-            left: 86px;
-        }
-
-        @include m.mq(pc) {
-            font-size: 4rem;
-        }
-    }
-}
-
-//.p-thumbnail
-
-.p-thumbnail--archive {
-    position: relative;
-
-    img {
-        width: 100%;
-        height: 283px;
-        object-fit: cover;
-        object-position: 30% 100%;
-        z-index: 1;
-
-        @include m.mq(pc) {
-            height: 239px;
-        }
-    }
-
-    h1 {
-        position: absolute;
-        left: 37px;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        color: v.$white-color;
-        z-index: 10;
-
-        @include m.mq(tab) {
-            left: 86px;
-        }
-
-        span {
-            display: block;
-            font-size: 1.6rem;
-
-            @include m.mq(tab) {
-                display: inline;
-                vertical-align: middle;
-                margin-left: 20px;
-
-            }
-        }
-    }
-}
-
-.p-thumbnail--single {
-    img {
-        height: 225px;
-
-        @include m.mq(tab) {
-            height: 500px;
-        }
-    }
-}*/
 .p-card__wrapper {
   display: flex;
   flex-direction: column;
@@ -927,11 +837,11 @@ ol.c-list li:before {
 }
 
 .p-card01 {
-  background: url(/wp-content/themes/hamburgershop/images/card_01.jpg) center center/cover no-repeat;
+  background: url(../images/card_01.jpg) center center/cover no-repeat;
 }
 
 .p-card02 {
-  background: url(/wp-content/themes/hamburgershop/images/card_02.jpg) center center/cover no-repeat;
+  background: url(../images/card_02.jpg) center center/cover no-repeat;
   margin-top: 20px;
 }
 @media screen and (min-width: 600px) {
@@ -992,7 +902,7 @@ ul.p-card__inner li p {
 .p-map {
   color: #FFF;
   overflow-wrap: normal;
-  background: url(/wp-content/themes/hamburgershop/images/map_02.png) no-repeat center center;
+  background: url(../images/map_02.png) no-repeat center center;
   background-size: cover;
   height: auto;
   min-height: 691px;
@@ -1168,17 +1078,18 @@ ul.p-card__inner li p {
 .p-footer .menu-footer-navigation-container {
   margin-top: 45px;
 }
-.p-footer .menu-footer-navigation-container ul {
+.p-footer .menu-footer-navigation-container ul.menu {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
 }
-.p-footer .menu-footer-navigation-container ul li a {
+.p-footer .menu-footer-navigation-container ul.menu li.menu-item a {
   padding: 0px 20px;
   color: #FFF;
 }
-.p-footer .menu-footer-navigation-container ul li:first-child {
+.p-footer .menu-footer-navigation-container ul.menu li:first-child {
   border-right: solid 1px #FFF;
 }
 .p-footer p small {
@@ -1378,18 +1289,19 @@ a.page,
 
 .previouspostslink {
   text-align: right;
-  background: url(/wp-content/themes/hamburgershop/images/pager_pre.png) left center no-repeat;
+  background: url(../images/pager_pre.png) left center no-repeat;
+  border: none;
 }
 
 .nextpostslink {
-  background: url(/wp-content/themes/hamburgershop/images/pager_next.png) right center no-repeat;
+  background: url(../images/pager_next.png) right center no-repeat;
+  border: none;
 }
 
 @media screen and (min-width: 600px) {
   .wp-pagenavi span.pages,
 .wp-pagenavi a.page,
 .wp-pagenavi .current {
-    display: inline-block;
     display: inline-block;
     margin-left: 15px;
     padding: 5px 11px;

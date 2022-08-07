@@ -33,23 +33,6 @@ a.page,
     display: none;
 }
 
-//&.prev,
-//&.next {
-//display: inline-block;
-
-//& a {
-//border: none;
-
-//img {
-//display: inline-block;
-//}
-//}
-//}
-
-//&.prev,
-//&.next {
-//margin-left: 7px;
-//}
 .previouspostslink,
 .nextpostslink {
     width: 60px;
@@ -58,14 +41,14 @@ a.page,
 
 .previouspostslink {
     text-align: right;
-    background: url(/wp-content/themes/hamburgershop/images/pager_pre.png) left center no-repeat;
+    background: url(../images/pager_pre.png) left center no-repeat;
+    border: none;
 }
 
 .nextpostslink {
-    background: url(/wp-content/themes/hamburgershop/images/pager_next.png) right center no-repeat;
+    background: url(../images/pager_next.png) right center no-repeat;
+    border: none;
 }
-
-
 
 @include m.mq(tab) {
     .wp-pagenavi {
@@ -73,7 +56,6 @@ a.page,
         span.pages,
         a.page,
         .current {
-            display: inline-block;
             display: inline-block;
             margin-left: 15px;
             padding: 5px 11px;
